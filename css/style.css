@@ -1,0 +1,1019 @@
+/* #BASE CSS (Initital Setup)
+---------------------------------
+    #BASE START
+        #HTML5
+    #BASE CONTENT
+        #TYPOGRAPHY
+            #BODY
+            #HELPERS
+        #MEDIA
+            #IMAGES
+            #VIDEOS
+        #COMPONENTS
+            #BUTTONS
+    #BASE LAYOUT
+        #MEDIAQUERIES
+        #CONTAINER
+        #GRID
+    #BASE SITE
+        #SITE STRUCTURE
+            #HEADER
+                #SITE-BRANDING (LOGO)
+            #FOOTER
+            #SECTIONS
+            #SUB PAGES
+        #SITE NAVIGATION
+            #TOGGLE-NAV (Default for Small Screens)
+--------------------------------- */
+
+
+/* #HTML5 */
+
+header,
+section,
+footer,
+aside,
+nav,
+main,
+article,
+figure {
+    display: block;
+}
+
+
+/* #TYPOGRAPHY  */
+
+body {
+    font-family: "mr-eaves-xl-modern", Helvetica, Arial, sans-serif;
+    color: #333;
+    font-size: 87.5%;
+    background-color: red;
+    /* 14px; */
+    line-height: 1.5em;
+    /* 14px x 1.5em = 21px */
+}
+
+h1 {
+    text-align: center;
+    font-family: "mr-eaves-xl-modern", Helvetica, Arial, sans-serif;
+    font-weight: 900;
+}
+
+.site-header h1 {
+    font-family: "mr-eaves-xl-modern", Helvetica, Arial, sans-serif;
+    font-weight: 200;
+}
+
+.citylogo h1,
+.trilogy h1,
+.dole h1,
+.bookcover h1,
+.cosmicwater h1 {
+    text-align: center;
+    font-family: "mr-eaves-xl-modern", Helvetica, Arial, sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 5em;
+    line-height: 1.1em;
+    text-transform: uppercase;
+    color: rgba(73, 72, 74);
+    margin-bottom: 0;
+}
+
+.citylogo h2,
+.trilogy h2,
+.dole h2,
+.brochure h2,
+.bookcover h2,
+.cosmicwater h2 {
+    text-align: center;
+    font-family: "mrs-eaves,", Helvetica, Arial, serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 5em;
+    padding-top: 2.5em;
+    color: rgba(64, 61, 61, 1);
+}
+
+
+/*  
+.h2 bottom h2 {
+    font-family: "mr-eaves-modern", Helvetica, Arial, serif;
+    font-weight: 100;
+
+
+}*/
+
+.citylogo h3,
+.trilogy h3,
+.brochure h3,
+.bookcover h3,
+.cosmicwater h3 {
+    font-family: "mr-eaves-xl-modern", Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    text-align: center;
+    font-size: 2.5em;
+    padding-top: 1em;
+}
+
+.cosmicbg {
+    background: rgb(250, 247, 250);
+}
+
+.cosmicbg h4 {
+    font-family: "mrs-eaves-xl-serif", serif;
+}
+
+.title h3 {
+    font-family: "mrs-eaves-roman-small-caps", Helvetica, Arial, sans-serif;
+    font-weight: 100;
+    text-align: center;
+    font-size: 2em;
+    padding-top: 5em;
+}
+
+.sub h4 {
+    font-family: "mrs-eaves-xl-serif", serif;
+}
+
+h4 {
+    text-align: center;
+    display: block;
+    /* margin-inline-start: 0px;
+    margin-inline-end: 0px; */
+    font-weight: bold;
+    font-size: 1.3em;
+    margin: 0;
+    padding-top: 2em;
+}
+
+p {
+    font-size: 1.3em;
+    line-height: 1.4em;
+}
+
+
+/* .citylogo .subheader, */
+
+.dole .subheader,
+.trilogy .subheader,
+.bookcover .subheader,
+.cosmicwater .subheader {
+    font-size: 3em;
+    padding-top: 2em;
+    font-family: "mrs-eaves", Helvetica, Arial, serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.cosmic h4 {
+    font-family: "mr-eaves-xl-modern", Helvetica, Arial, serif;
+    font-size: 3em;
+    font-weight: 200;
+    padding-top: 0;
+    text-align: center;
+    margin-top: 0;
+}
+
+.cosmicbg h4 {
+    padding-top: 0em;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.citylogo .two-thirds column centered {
+    color: rgba(64, 61, 61, 1);
+}
+
+.site-navigation li a:hover,
+.gradient h3 {
+    background-image: linear-gradient( 90deg, rgba(57, 198, 171, 1) 0%, rgba(239, 50, 171, 1) 50%, rgba(217, 232, 70, 1) 100%);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-size: 400%;
+    animation: animatedGradient 3s ease infinite;
+    text-align: center;
+}
+
+.site-branding p {
+    font-size: 1em;
+    margin-top: 0;
+}
+
+
+/* 
+.bottom h3 {
+    font-size: 1em;
+    background: orange;
+} */
+
+@keyframes animatedGradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.gradient h3 {
+    font-size: 1.6em;
+    font-family: coquette, sans-serif;
+    font-weight: 300;
+    line-height: 1.6em;
+}
+
+
+/* #LINKS */
+
+a {
+    color: #bbb;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #999;
+}
+
+
+/* HELPERS */
+
+.text-centered {
+    text-align: center;
+}
+
+.hidden,
+.hide-visually {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+}
+
+.subheader {
+    color: #999;
+    margin-top: 1em;
+    font-style: normal;
+    font-weight: normal;
+    clear: both;
+    text-align: center;
+    padding-top: 4em;
+}
+
+
+/* #BUTTONS */
+
+button {
+    font-size: inherit;
+}
+
+button,
+a.button {
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    font-size: 80%;
+    display: inline-block;
+    background-color: #bbb;
+    border: 1px solid #bbb;
+    color: #fff;
+    padding: 0.8em 1em 0.65em 1em;
+    -webkit-border-radius: 0.32em;
+    -moz-border-radius: 0.32em;
+    border-radius: 0.32em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    border: none;
+    cursor: pointer;
+    line-height: 1em;
+    transition: all ease-in-out 0.4s;
+}
+
+button.alt,
+a.button.alt {
+    background-color: rgba(255, 255, 255, 0);
+    border: 0.05em solid #dedede;
+    color: #bbb;
+}
+
+button:hover,
+a.button:hover,
+button.active:hover,
+a.button.active:hover {
+    background-color: #bbb;
+    color: #fff;
+    border-color: #bbb;
+    text-decoration: none;
+}
+
+button:focus,
+a.button:focus {
+    outline: none;
+}
+
+button.active,
+a.button.active {
+    background-color: #f5f5f5;
+    border-color: #bbb;
+}
+
+
+/* #IMAGES */
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+img.circular {
+    border-radius: 100%;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+
+/* VIDEO */
+
+.video {
+    width: 100%;
+    position: relative;
+    padding-bottom: 56.25%;
+    /* 16:9 */
+    padding-top: 25px;
+    height: 0;
+    margin-bottom: 1em;
+}
+
+.video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* LAYOUT */
+
+
+/*
+#MEDIA QUERIES (Mobile First)
+	#DEFAULT/SMALL+ (Mobile First - Default Settings Outside of Media Queries)
+	#MEDIUM+ (Tablet) - min-width: 768px
+  #LARGE+ (Desktop) - min-width: 1150px
+  
+/* SMALL+ (Mobile First Defaults) */
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 92%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 4%;
+}
+
+
+/* #LARGE+ MEDIA QUERY */
+
+@media (min-width: 1150px) {
+    /* LARGE BODY TYPE */
+    body {
+        font-size: 100%;
+        /* 16px; */
+    }
+}
+
+
+/* Grid */
+
+
+/* Default Grid (on SMALL+ Screen Sizes) */
+
+.row {
+    margin: 0;
+}
+
+.column {
+    /* margin: 3em 0 3em 2em; */
+}
+
+
+/* Medium Grid (on MEDIUM+ Screen Sizes) */
+
+@media (min-width: 768px) {
+    .column {
+        float: left;
+        margin-right: 8%;
+    }
+    .column:last-child {
+        margin-right: 0;
+    }
+    .column.centered {
+        float: none;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .one-whole.column {
+        width: 100%;
+    }
+    .one-half.column {
+        width: 46%;
+    }
+    .one-third.column {
+        width: 28%;
+    }
+    .two-thirds.column {
+        width: 64.6666%;
+    }
+    .one-fourth.column {
+        width: 19%;
+    }
+    .one-fifth.column {
+        width: 13.6%;
+    }
+}
+
+.trilogy p,
+.pictogram p,
+.dole p,
+.bookcover p,
+.brochure p,
+.citylogo p {
+    padding-bottom: 3em;
+}
+
+.p-left {
+    padding-left: 3em;
+    text-align: left;
+}
+
+.p-right {
+    padding-right: 3em;
+    text-align: left;
+}
+
+.one-half.column p {
+    margin-top: 2.5em;
+}
+
+.row.nomargin h3 {
+    text-align: left;
+}
+
+.below h2 {
+    padding-top: 3em;
+    padding-bottom: 1em;
+    font-size: 1.8em;
+    font-weight: 300;
+    color: rgba(73, 72, 74);
+}
+
+
+/* 
+.pictogram p {
+  max-width: 32em;
+  text-align: center;
+} */
+
+.row .swap {
+    flex-direction: row-reverse;
+}
+
+
+/* GRID */
+
+.row .column {
+    margin-bottom: 2%;
+}
+
+@media (min-width: 768px) {
+    .row {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: -1%;
+        margin-right: -1%;
+    }
+    .row.nomargin .column {
+        margin: 0;
+    }
+    .row.nomargin img {
+        display: block;
+    }
+    .swap {
+        flex-direction: row-reverse;
+    }
+    .center {
+        flex-direction: column;
+        align-items: center;
+    }
+    .column {
+        /* flex-grow: 1; */
+        margin: 1%;
+    }
+}
+
+@media (max-width: 767px) {
+    .column.small {
+        float: left;
+        margin-right: 8%;
+    }
+    .column.small:last-child {
+        margin-right: 0;
+    }
+    .one-third.column.small {
+        width: 28%;
+    }
+}
+
+
+/* #CLEARFIXES */
+
+
+/* 
+.group:after,
+.row:after,
+.container:after,
+.nav:after {
+    content: "";
+    display: table;
+    clear: both;
+    font-size: 0;
+}
+ */
+
+
+/* Header & Footer */
+
+.site-header {
+    /* border-bottom: 1px solid #eee; */
+    padding: 0 0 2em 0;
+}
+
+.site-header a {
+    text-decoration: none;
+    color: rgba(33, 33, 36, 0.5);
+}
+
+@media (min-width: 768px) {
+    .site-header {
+        padding-top: 1em;
+    }
+}
+
+.site-footer {
+    padding-top: 100px;
+}
+
+.site-footer ul li {
+    /* background-color: linear-gradient(90deg, rgba(239, 50, 171, 1) 0%, rgba(57, 198, 171, 1) 50%, rgba(217, 232, 70, 1)100%); */
+    color: linear-gradient(90deg, rgba(239, 50, 171, 1) 0%, rgba(57, 198, 171, 1) 50%, rgba(217, 232, 70, 1) 100%);
+}
+
+
+/* border-top: 1px solid #eee; */
+
+
+/* Site Branding */
+
+.site-branding {
+    text-align: center;
+}
+
+.site-branding img {
+    max-width: 150px;
+}
+
+
+/* #SITE NAVIGATION  */
+
+
+/* Default Site-Navigation Menu (both header & footer) */
+
+.site-navigation {
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    font-size: 90%;
+    text-align: center;
+}
+
+.site-navigation .menu-button {
+    position: absolute;
+    left: -9999px;
+    top: -9999px;
+}
+
+.site-navigation ul,
+li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.site-navigation li {
+    display: inline-block;
+}
+
+.site-navigation li a {
+    display: block;
+    padding: 1em;
+}
+
+.site-navigation li.selected a:after {
+    content: "";
+    width: 20px;
+    height: 2px;
+    /* background: rgba(0,0,0,.5); */
+    background: linear-gradient(90deg, rgba(239, 50, 171, 1) 0%, rgba(57, 198, 171, 1) 50%, rgba(217, 232, 70, 1) 100%);
+    display: block;
+    /* border-bottom: 0.05em solid #dedede; */
+    padding: 0;
+    color: #999;
+    margin: 5px auto 0 auto;
+}
+
+
+/* Main Site Section (Main Content Area) */
+
+
+/* Main Sections */
+
+section {
+    padding: 1.5em 0;
+}
+
+
+/* about info */
+
+.info h3 {
+    padding-top: 3em;
+}
+
+.info h3,
+.info p {
+    text-align: center;
+}
+
+
+/* FORMS */
+
+form {
+    margin: 1.75em 0;
+}
+
+form label {
+    display: block;
+}
+
+form input,
+form textarea {
+    font-family: "mr-eaves-xl-modern", Helvetica, Arial, sans-serif;
+    font-size: 1em;
+    line-height: 1.15em;
+    display: block;
+    margin-bottom: 1.25em;
+    width: 100%;
+    color: #666;
+    padding: 0.25em;
+    border: 1px solid #ccc;
+}
+
+form textarea {
+    border: 1px solid #ccc;
+    min-height: 6em;
+}
+
+form input[type="button"],
+form input[type="submit"],
+form input[type="reset"] {
+    width: auto;
+    background-color: #39c;
+    border: 1px solid #39c;
+    color: #fff;
+    padding: 0.75em 1em;
+    -webkit-border-radius: 0.32em;
+    -moz-border-radius: 0.32em;
+    border-radius: 0.32em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+form input[type="button"]:hover,
+form input[type="submit"]:hover,
+form input[type="reset"]:hover {
+    background-color: #069;
+    border-color: #069;
+}
+
+
+/* Page Fade-ins */
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+main,
+fade-in {
+    opacity: 0;
+    animation: fade-in ease-in-out 1;
+    animation-fill-mode: forwards;
+    animation-duration: 0.5s;
+}
+
+@keyframes fade-and-move-in {
+    from {
+        transform: translate(0, -20px);
+        opacity: 0;
+    }
+    to {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+}
+
+.fade-and-move-in {
+    opacity: 0;
+    animation: fade-and-move-in ease-out 1;
+    animation-fill-mode: forwards;
+    animation-duration: 0.5s;
+}
+
+.fade-and-move-in:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.fade-and-move-in:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.fade-and-move-in:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+.fade-and-move-in:nth-child(4) {
+    animation-delay: 0.7s;
+}
+
+.fade-and-move-in:nth-child(5) {
+    animation-delay: 1s;
+}
+
+
+/* #SITE SPECIFIC CUSTOM CSS (e.g. Base Overrides)
+--------------------------------- */
+
+body {
+    font-family: "mr-eaves-xl-modern", Helvetica, Arial, sans-serif;
+    background: #fff;
+}
+
+.site-navigation {
+    font-family: "mr-eaves-xl-modern", Helvetica, Arial, sans-serif;
+    /* background: linear-gradient(90deg,  rgba(57,198,171,1) 0%, rgba(239,50,171,1) 50%, rgba(217,232,70,1)100%);  */
+}
+
+
+/* Custom Sections */
+
+#work {
+    padding-bottom: 4em;
+}
+
+.hero {
+    /* background: #dedede; */
+    text-align: center;
+    /* padding: 4em 0; */
+}
+
+.text-centered p {
+    text-align: left;
+    max-width: 26em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/*  #LAYOUT: THUMB IMAGE GRID */
+
+.thumbgrid {
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0;
+}
+
+.thumbgrid li {
+    position: relative;
+    list-style: none;
+    width: 46%;
+    margin: 2%;
+    padding: 0;
+    border-radius: 50%;
+    overflow: hidden;
+    clip-path: circle(100% at 50% 50%);
+    /* padding-bottom: 0.4%; */
+}
+
+@media (min-width: 768px) {
+    .thumbgrid li {
+        width: 29.333%;
+    }
+    .thumbgrid.small li {
+        width: 15%;
+    }
+}
+
+.thumbgrid a {
+    display: block;
+}
+
+
+/*  
+.thumbgrid a img {
+    filter: brightness(1.05);
+    transition: all ease-in-out 0.2s;
+    display: block;
+}
+
+.thumbgrid a:hover img {
+    filter: brightness(1);
+}*/
+
+.icon-char {
+    font-size: 2em;
+    font-weight: 200;
+    display: block;
+    margin-top: 0.25em;
+    margin-bottom: 0.25em;
+    color: #dedede;
+}
+
+
+/* Custom MixItUp Styling */
+
+.mixcontainer {
+    /* text-align: center; */
+}
+
+.mixcontrols {
+    margin-bottom: 2em;
+}
+
+
+/* gradient text */
+
+.gradient h1 {
+    line-height: 175px;
+    font-size: 125px;
+    font-family: "mr-eaves-xl-modern";
+    display: inline-block;
+    background-image: linear-gradient(to bottom, purple, pink);
+    color: transparent;
+    -webkit-background-clip: text;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Hover Caps */
+
+.hovercaps {
+    position: relative;
+}
+
+.hovercaps a {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    color: rgb(248, 250, 245);
+}
+
+.hovercaps img {
+    display: block;
+}
+
+
+/* 
+.hovercaps.small .caption2 h3 {
+    font-size: 2vw;
+    line-height: 1;
+    text-align: center;
+} */
+
+.hovercaps .caption,
+.hovercaps .caption2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease-in;
+    background-size: 400%;
+    background-image: linear-gradient(90deg, rgba(57, 198, 171, 1) 0%, rgba(239, 50, 171, 1) 50%, rgba(217, 232, 70, 1) 100%);
+    animation: animatedGradient 10s ease infinite;
+    opacity: 0.7;
+}
+
+.hovercaps .caption h3 {
+    font-family: "mr-eaves-xl-modern", Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-size: 2.2em;
+    line-height: 1.2;
+    font-weight: 800;
+}
+
+.hovercaps .caption2 h3 {
+    font-family: "mr-eaves-xl-modern", Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-size: 1.4em;
+    line-height: 1.2;
+    font-weight: 200;
+    text-align: center;
+}
+
+a.caption2 h3 {
+    visibility: hidden;
+}
+
+.caption2 h3 a:hover {
+    visibility: visible;
+}
+
+
+/* 
+@media (min-width: 768px) {
+    .hovercaps .caption2 h3 {
+        font-size: 3em;
+    }
+} */
+
+
+/* .hovercaps .caption.blue { 
+    --move: translate(101%, 0%);
+}
+
+.hovercaps .caption.purple {
+    --move: translate(0, 101%);
+}
+
+.hovercaps .caption.turquoize {
+    --move: translate(0, -101%);
+}
+
+.hovercaps a:hover .caption {
+    transition-timing-function: ease-out;
+    transform: var(--move, translate(-101%, 0));
+}
+*/
+
+.hovercaps a:hover .caption {
+    animation: hoverfade 1.5s linear both;
+}
+
+
+/* change the seconds on the hoverfade to make the animation go faster/slower */
+
+@keyframes hoverfade {
+    0% {
+        opacity: 0.7;
+    }
+    /* 10% {
+        opacity: 1;
+    } */
+    100% {
+        opacity: 0;
+    }
+}
+
+.hovercaps h3 {
+    margin: 0;
+}
+
+
+/* .hovercaps.small .caption .caption2 h3 {
+    font-size: 1em;
+} */
