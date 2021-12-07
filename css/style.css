@@ -120,7 +120,8 @@ h1 {
     background: rgb(250, 247, 250);
 }
 
-.cosmicbg h4 {
+.cosmicbg h4,
+.hookahi h4 {
     font-family: "mrs-eaves-xl-serif", serif;
 }
 
